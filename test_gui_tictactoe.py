@@ -56,5 +56,25 @@ class TestTicTacToeLogic(unittest.TestCase):
         self.assertFalse(self.window.check_winner("X"))
         self.assertFalse(self.window.check_winner("O"))
 
+    def test_on_click(self):
+        # Verify initial player is X
+        self.assertEqual(self.window.current_player, "X")
+        
+        # Test valid move - should update button and switch player
+        self.window.on_click(0, 0)
+        self.assertEqual(self.window.buttons[0][0].text(), "X")
+        self.assertEqual(self.window.current_player, "O")
+        
+        # Test clicking an occupied cell - should not change anything
+        original_player = self.window.current_player
+        self.window.on_click(0, 0)  # Click the same button again
+        self.assertEqual(self.window.buttons[0][0].text(), "X")  # Text remains X
+        self.assertEqual(self.window.current_player, original_player)  # Player unchanged
+        
+        # Test another valid move - player O should play
+        self.window.on_click(1, 1)
+        self.assertEqual(self.window.buttons[1][1].text(), "O")
+        self.assertEqual(self.window.current_player, "X")  # Back to X
+
 if __name__ == "__main__":
     unittest.main()
