@@ -44,6 +44,18 @@ deactivate
 ```
 
 
+### 6. 🧪 Running Tests
+
+Make sure you have activated your virtual environment and installed dependencies first. Then run:
+
+```bash
+python3 -m unittest test_gui_tictactoe.py -v
+```
+
+This will run all unit tests and show detailed output for each test case.
+
+---
+
 # 🧱 File Structure
 ```
 .
