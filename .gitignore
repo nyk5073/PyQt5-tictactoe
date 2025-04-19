@@ -1,0 +1,14 @@
+# Ignore Python bytecode cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environment directories (if you're using one)
+.venv/
+venv/
+
+# Ignore editor backup files (depending on your editor)
+.idea/
+*.suo
+*.swp
