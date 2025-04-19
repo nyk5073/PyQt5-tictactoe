@@ -19,7 +19,7 @@ A simple yet fun 2-player Tic-Tac-Toe game built with **PyQt5** for a clean and 
 
 ```bash
 git clone https://github.com/nyk5073/PyQt5-tictactoe.git
-cd tic-tac-toe-pyqt
+cd PyQt5-tictactoe
 ```
 
 ### 2. Set up a Python virtual environment (recommended)
